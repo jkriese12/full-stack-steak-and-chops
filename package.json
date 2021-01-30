@@ -1,0 +1,25 @@
+{
+  "name": "full-stack-steak-and-chops",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jkriese12/full-stack-steak-and-chops.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jkriese12/full-stack-steak-and-chops/issues"
+  },
+  "homepage": "https://github.com/jkriese12/full-stack-steak-and-chops#readme"
+}
