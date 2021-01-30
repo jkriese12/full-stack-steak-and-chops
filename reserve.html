@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Steak + Chops Restaurant</title>
+  <title>Steak + Chops Reservation Page</title>
   <!-- Latest compiled and minified CSS & JS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -10,26 +11,22 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 </head>
+
 <body>
 
   <div class="container">
     <div class="jumbotron text-center">
       <h1>Steak + Chops Restaurant</h1>
       <h3>Make a Reservation!</h3>
-      <hr>
-      <!-- <a href="/"><button class="btn btn-danger btn-lg"><span class="fa fa-eye"></span> View Characters</button></a> -->
     </div>
     <div class="row">
-
       <div class="col-12">
-
         <div class="card">
           <div class="card-header">
             <h3><strong>Make A Reservation</strong></h3>
           </div>
           <div class="card-body">
             <form method="POST" role="form">
-
               <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" class="form-control" id="reserve_name">
@@ -49,22 +46,29 @@
                 <label for="uniqueID">Unique ID</label>
                 <input type="text" class="form-control" id="reserve_uniqueID">
               </div>
-
             </form>
             <br>
             <div class="text-right">
-              <button type="submit" class="btn btn-dark btn-md" id="add-btn"><span class="fa fa-fire"></span> Reserve Table!</button>
+              <button type="submit" class="btn btn-dark btn-md" id="add-btn"><span class="fa fa-fire"></span> Reserve
+                Table!</button>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </div>
 
+  <footer>
+    <div class="container mt-3">
+      <a href="/api/waitlist">API Wait List</a>
+      <span> | </span>
+      <a href="/api/waitlist">API Wait List</a>
+    </div>
+  </footer>
+
   <script type="text/javascript">
     // Button click event takes in and trims input from form
-    $("#add-btn").on("click", function(event) {
+    $("#add-btn").on("click", function (event) {
       event.preventDefault();
       var newCharacter = {
         name: $("#reserve_name").val().trim(),
@@ -75,7 +79,7 @@
 
       // Question: What does this code do??
       $.post("/api/characters", newCharacter)
-        .then(function(data) {
+        .then(function (data) {
           console.log("add.html", data);
           alert("Adding character...");
         });
@@ -83,4 +87,5 @@
   </script>
 
 </body>
+
 </html>
