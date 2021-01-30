@@ -58,12 +58,10 @@ app.post("/reserve", function (req, res) {
     newRes.routeName = newRes.name.replace(/\s+/g, "").toLowerCase();
     currentRes.push(newRes);
     res.json(newRes);
-    alert("Reservation Successful");
   } else {
     newRes.routeName = newRes.name.replace(/\s+/g, "").toLowerCase();
     waitList.push(newRes);
     res.json(newRes);
-    alert("You have been added to the waiting list");
   }
 });
 // Starts the server to begin listening
