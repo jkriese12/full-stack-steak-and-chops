@@ -70,18 +70,17 @@
     // Button click event takes in and trims input from form
     $("#add-btn").on("click", function (event) {
       event.preventDefault();
-      var newCharacter = {
+      var newRes = {
         name: $("#reserve_name").val().trim(),
         role: $("#reserve_phone").val().trim(),
         age: $("#reserve_email").val().trim(),
-        forcePoints: $("#reserve_uniqueID").val().trim()
+        uniqueID: $("#reserve_uniqueID").val().trim()
       };
 
-      // Question: What does this code do??
-      $.post("/api/characters", newCharacter)
+      $.post("/tables", newRes)
         .then(function (data) {
-          console.log("add.html", data);
-          alert("Adding character...");
+          console.log("reserve.html", data);
+          alert("Your table has been reserved!");
         });
     });
   </script>
